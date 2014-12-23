@@ -1,0 +1,513 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:814: checking for gcc
+configure:927: checking whether the C compiler (gcc -O  ) works
+configure:943: gcc -o conftest -O    conftest.c  1>&5
+configure:969: checking whether the C compiler (gcc -O  ) is a cross-compiler
+configure:974: checking whether we are using GNU C
+configure:1002: checking whether gcc accepts -g
+configure:1064: checking for a BSD compatible install
+configure:1121: checking for gawk
+configure:1152: checking if the linker (ld) is GNU ld
+configure:1169: checking for passwd
+configure:1206: checking whether gcc and cc understand -c and -o together
+configure:1264: checking that the C compiler understands volatile
+configure:1327: checking host system type
+configure:1348: checking target system type
+configure:1366: checking build system type
+configure:1400: checking config.cache system type
+configure:1665: checking for LFS support
+configure:1710: gcc -o conftest -O  -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE   conftest.c  1>&5
+configure: In function 'main':
+configure:1688: warning: incompatible implicit declaration of built-in function 'exit'
+configure: failed program was:
+#line 1672 "configure"
+#include "confdefs.h"
+
+#include <unistd.h>
+#include <sys/utsname.h>
+main() {
+#if _LFS64_LARGEFILE == 1
+       struct utsname uts;
+       char *release;
+       int major, minor;
+
+       /* Ensure this is glibc 2.2 or higher */
+#if defined(__GLIBC__) && defined(__GLIBC_MINOR__)
+       int libc_major = __GLIBC__;
+       int libc_minor = __GLIBC_MINOR__;
+
+       if (libc_major < 2)
+              exit(1);
+       if (libc_minor < 2)
+              exit(1);
+#endif
+
+       /* Ensure this is kernel 2.4 or higher */
+
+       uname(&uts);
+       release = uts.release;
+       major = atoi(strsep(&release, "."));
+       minor = atoi(strsep(&release, "."));
+
+       if (major > 2 || (major == 2 && minor > 3))
+               exit(0);
+       exit(1);
+#else
+       exit(1);
+#endif
+}
+
+configure:1792: checking for inline
+configure:1832: checking how to run the C preprocessor
+configure:1912: checking for ANSI C header files
+configure:2020: checking for dirent.h that defines DIR
+configure:2058: checking for opendir in -ldir
+configure:2141: checking whether time.h and sys/time.h may both be included
+configure:2176: checking for sys/wait.h that is POSIX.1 compatible
+configure:2221: checking for arpa/inet.h
+configure:2221: checking for sys/fcntl.h
+configure:2221: checking for sys/select.h
+configure:2221: checking for fcntl.h
+configure:2221: checking for sys/time.h
+configure:2221: checking for sys/unistd.h
+configure:2261: checking for unistd.h
+configure:2261: checking for utime.h
+configure:2261: checking for grp.h
+configure:2261: checking for sys/id.h
+configure:2261: checking for limits.h
+configure:2261: checking for memory.h
+configure:2261: checking for net/if.h
+configure:2301: checking for compat.h
+configure:2301: checking for rpc/rpc.h
+configure:2301: checking for rpcsvc/nis.h
+configure:2301: checking for rpcsvc/yp_prot.h
+configure:2301: checking for rpcsvc/ypclnt.h
+configure:2341: checking for stdlib.h
+configure:2341: checking for string.h
+configure:2341: checking for strings.h
+configure:2341: checking for syslog.h
+configure:2341: checking for sys/file.h
+configure:2381: checking for sys/param.h
+configure:2381: checking for ctype.h
+configure:2381: checking for sys/wait.h
+configure:2381: checking for sys/resource.h
+configure:2381: checking for sys/ioctl.h
+configure:2381: checking for sys/ipc.h
+configure:2381: checking for sys/mode.h
+configure:2421: checking for sys/mman.h
+configure:2421: checking for sys/filio.h
+configure:2421: checking for sys/priv.h
+configure:2421: checking for sys/shm.h
+configure:2421: checking for sys/socket.h
+configure:2461: checking for syslog.h
+configure:2461: checking for sys/syslog.h
+configure:2461: checking for sys/mount.h
+configure:2461: checking for sys/vfs.h
+configure:2461: checking for sys/fs/s5param.h
+configure:2461: checking for sys/filsys.h
+configure:2461: checking for termios.h
+configure:2461: checking for termio.h
+configure:2501: checking for sys/termio.h
+configure:2501: checking for sys/statfs.h
+configure:2501: checking for sys/dustat.h
+configure:2501: checking for sys/statvfs.h
+configure:2501: checking for stdarg.h
+configure:2501: checking for sys/sockio.h
+configure:2541: checking for security/pam_modules.h
+configure:2541: checking for security/_pam_macros.h
+configure:2541: checking for dlfcn.h
+configure:2541: checking for synch.h
+configure:2541: checking for pthread.h
+configure:2541: checking for nsswitch.h
+configure:2614: checking for shadow.h
+configure:2614: checking for netinet/ip.h
+configure:2614: checking for netinet/tcp.h
+configure:2614: checking for netinet/in_systm.h
+configure:2614: checking for netinet/in_ip.h
+configure:2654: checking for nss.h
+configure:2654: checking for nss_common.h
+configure:2654: checking for ns_api.h
+configure:2654: checking for sys/security.h
+configure:2654: checking for security/pam_appl.h
+configure:2654: checking for security/pam_modules.h
+configure:2694: checking for stropts.h
+configure:2694: checking for poll.h
+configure:2734: checking for sys/capability.h
+configure:2734: checking for syscall.h
+configure:2734: checking for sys/syscall.h
+configure:2774: checking for sys/acl.h
+configure:2774: checking for sys/cdefs.h
+configure:2774: checking for glob.h
+configure:2816: checking for utmp.h
+configure:2816: checking for utmpx.h
+configure:2816: checking for lastlog.h
+configure:2858: checking for sys/fs/vx_quota.h
+configure:2900: checking for linux/xqm.h
+configure:2938: checking size of int
+configure:2977: checking size of long
+configure:3016: checking size of short
+configure:3056: checking for working const
+configure:3131: checking for inline
+configure:3171: checking whether byte ordering is bigendian
+configure:3261: checking whether char is unsigned
+configure:3325: checking return type of signal handlers
+configure:3366: checking for uid_t in sys/types.h
+configure:3400: checking for mode_t
+configure:3433: checking for off_t
+configure:3466: checking for size_t
+configure:3499: checking for pid_t
+configure:3532: checking for st_rdev in struct stat
+configure:3566: checking for d_off in dirent
+configure:3602: checking for ino_t
+configure:3635: checking for loff_t
+configure:3668: checking for offset_t
+configure:3701: checking for ssize_t
+configure:3734: checking for wchar_t
+configure:3781: checking for cups-config
+configure:3830: checking for dlopen
+configure:3884: checking for dlopen in -ldl
+configure:3933: checking for immediate structures
+configure:3980: checking for unix domain sockets
+configure:4022: checking for socklen_t type
+configure:4062: checking for sig_atomic_t type
+configure:4104: checking for errno declaration
+configure:4139: checking for setresuid declaration
+configure:4174: checking for setresgid declaration
+configure:4209: checking for asprintf declaration
+configure:4244: checking for vasprintf declaration
+configure:4279: checking for vsnprintf declaration
+configure:4314: checking for snprintf declaration
+configure:4351: checking for real setresuid
+configure:4390: checking for real setresgid
+configure:4428: checking for 8-bit clean memcmp
+configure:4470: checking whether to use readline
+configure:4482: checking for readline.h
+configure:4482: checking for history.h
+configure:4482: checking for readline/readline.h
+configure:4522: checking for readline/history.h
+configure:4563: checking for readline.h
+configure:4563: checking for readline/readline.h
+configure:4936: checking for connect
+configure:5205: checking for yp_get_default_domain
+configure:5259: checking for yp_get_default_domain in -lnsl
+configure:5308: checking for execl
+configure:5369: checking for dlopen
+configure:5369: checking for dlclose
+configure:5369: checking for dlsym
+configure:5369: checking for dlerror
+configure:5369: checking for waitpid
+configure:5369: checking for getcwd
+configure:5369: checking for strdup
+configure:5369: checking for strndup
+configure:5369: checking for strnlen
+configure:5369: checking for strtoul
+configure:5369: checking for strerror
+configure:5369: checking for chown
+configure:5369: checking for fchown
+configure:5369: checking for chmod
+configure:5369: checking for fchmod
+configure:5369: checking for chroot
+configure:5369: checking for link
+configure:5424: checking for fstat
+configure:5424: checking for strchr
+configure:5424: checking for utime
+configure:5424: checking for utimes
+configure:5424: checking for getrlimit
+configure:5424: checking for fsync
+configure:5424: checking for bzero
+configure:5424: checking for memset
+configure:5424: checking for strlcpy
+configure:5424: checking for strlcat
+configure:5424: checking for setpgid
+configure:5424: checking for mknod
+configure:5424: checking for mknod64
+configure:5479: checking for memmove
+configure:5479: checking for vsnprintf
+configure:5479: checking for snprintf
+configure:5479: checking for asprintf
+configure:5479: checking for vasprintf
+configure:5479: checking for setsid
+configure:5479: checking for glob
+configure:5479: checking for strpbrk
+configure:5479: checking for pipe
+configure:5479: checking for crypt16
+configure:5479: checking for getauthuid
+configure:5534: checking for strftime
+configure:5534: checking for sigprocmask
+configure:5534: checking for sigblock
+configure:5534: checking for sigaction
+configure:5534: checking for sigset
+configure:5534: checking for innetgr
+configure:5534: checking for setnetgrent
+configure:5534: checking for getnetgrent
+configure:5534: checking for endnetgrent
+configure:5589: checking for initgroups
+configure:5589: checking for select
+configure:5589: checking for poll
+configure:5589: checking for rdchk
+configure:5589: checking for getgrnam
+configure:5589: checking for getgrent
+configure:5589: checking for pathconf
+configure:5589: checking for realpath
+configure:5644: checking for setpriv
+configure:5644: checking for setgidx
+configure:5644: checking for setuidx
+configure:5644: checking for setgroups
+configure:5644: checking for sysconf
+configure:5644: checking for mktime
+configure:5644: checking for rename
+configure:5644: checking for ftruncate
+configure:5644: checking for stat64
+configure:5644: checking for fstat64
+configure:5699: checking for lstat64
+configure:5699: checking for fopen64
+configure:5699: checking for atexit
+configure:5699: checking for grantpt
+configure:5699: checking for dup2
+configure:5699: checking for lseek64
+configure:5699: checking for ftruncate64
+configure:5699: checking for readdir64
+configure:5754: checking for fseek64
+configure:5754: checking for fseeko64
+configure:5754: checking for ftell64
+configure:5754: checking for ftello64
+configure:5754: checking for setluid
+configure:5754: checking for getpwanam
+configure:5754: checking for setlinebuf
+configure:5809: checking for srandom
+configure:5809: checking for random
+configure:5809: checking for srand
+configure:5809: checking for rand
+configure:5809: checking for setenv
+configure:5809: checking for usleep
+configure:5809: checking for strcasecmp
+configure:5809: checking for fcvt
+configure:5809: checking for fcvtl
+configure:5809: checking for symlink
+configure:5809: checking for readlink
+configure:5864: checking for syslog
+configure:5864: checking for vsyslog
+configure:5921: checking for syscall
+configure:5977: checking for _dup
+configure:5977: checking for _dup2
+configure:5977: checking for _opendir
+configure:5977: checking for _readdir
+configure:5977: checking for _seekdir
+configure:5977: checking for _telldir
+configure:5977: checking for _closedir
+configure:6032: checking for __dup
+configure:6032: checking for __dup2
+configure:6032: checking for __opendir
+configure:6032: checking for __readdir
+configure:6032: checking for __seekdir
+configure:6032: checking for __telldir
+configure:6032: checking for __closedir
+configure:6087: checking for __getcwd
+configure:6087: checking for _getcwd
+configure:6142: checking for __xstat
+configure:6142: checking for __fxstat
+configure:6142: checking for __lxstat
+configure:6197: checking for _stat
+configure:6197: checking for _lstat
+configure:6197: checking for _fstat
+configure:6197: checking for __stat
+configure:6197: checking for __lstat
+configure:6197: checking for __fstat
+configure:6252: checking for _acl
+configure:6252: checking for __acl
+configure:6252: checking for _facl
+configure:6252: checking for __facl
+configure:6252: checking for _open
+configure:6252: checking for __open
+configure:6252: checking for _chdir
+configure:6252: checking for __chdir
+configure:6307: checking for _close
+configure:6307: checking for __close
+configure:6307: checking for _fchdir
+configure:6307: checking for __fchdir
+configure:6307: checking for _fcntl
+configure:6307: checking for __fcntl
+configure:6362: checking for getdents
+configure:6362: checking for _getdents
+configure:6362: checking for __getdents
+configure:6362: checking for _lseek
+configure:6362: checking for __lseek
+configure:6362: checking for _read
+configure:6362: checking for __read
+configure:6417: checking for _write
+configure:6417: checking for __write
+configure:6417: checking for _fork
+configure:6417: checking for __fork
+configure:6472: checking for _stat64
+configure:6472: checking for __stat64
+configure:6472: checking for _fstat64
+configure:6472: checking for __fstat64
+configure:6472: checking for _lstat64
+configure:6472: checking for __lstat64
+configure:6527: checking for __sys_llseek
+configure:6527: checking for llseek
+configure:6527: checking for _llseek
+configure:6527: checking for __llseek
+configure:6527: checking for readdir64
+configure:6527: checking for _readdir64
+configure:6527: checking for __readdir64
+configure:6582: checking for pread
+configure:6582: checking for _pread
+configure:6582: checking for __pread
+configure:6582: checking for pread64
+configure:6582: checking for _pread64
+configure:6582: checking for __pread64
+configure:6637: checking for pwrite
+configure:6637: checking for _pwrite
+configure:6637: checking for __pwrite
+configure:6637: checking for pwrite64
+configure:6637: checking for _pwrite64
+configure:6637: checking for __pwrite64
+configure:6692: checking for open64
+configure:6692: checking for _open64
+configure:6692: checking for __open64
+configure:6692: checking for creat64
+configure:6964: checking for putprpwnam in -lsecurity
+configure:7013: checking for putprpwnam
+configure:7125: checking for putprpwnam in -lsec
+configure:7174: checking for putprpwnam
+configure:7287: checking for set_auth_parameters in -lsecurity
+configure:7336: checking for set_auth_parameters
+configure:7448: checking for set_auth_parameters in -lsec
+configure:7497: checking for set_auth_parameters
+configure:7611: checking for getspnam in -lgen
+configure:7660: checking for getspnam
+configure:7773: checking for getspnam in -lsecurity
+configure:7822: checking for getspnam
+configure:7934: checking for getspnam in -lsec
+configure:7983: checking for getspnam
+configure:8096: checking for bigcrypt in -lsecurity
+configure:8145: checking for bigcrypt
+configure:8257: checking for bigcrypt in -lsec
+configure:8306: checking for bigcrypt
+configure:8419: checking for getprpwnam in -lsecurity
+configure:8468: checking for getprpwnam
+configure:8580: checking for getprpwnam in -lsec
+configure:8629: checking for getprpwnam
+configure:8700: checking ability to build shared libraries
+configure:8977: checking linker flags for shared libraries
+configure:8980: checking compiler flags for position-independent code
+configure:9051: checking for long long
+configure:9092: checking for LL suffix on long long integers
+configure:9127: checking for 64 bit off_t
+configure:9165: checking for off64_t
+configure:9207: checking for 64 bit ino_t
+configure:9245: checking for ino64_t
+configure:9287: checking for dev64_t
+configure:9329: checking for struct dirent64
+configure:9368: checking for major macro
+configure:9409: checking for minor macro
+configure:9450: checking for makedev macro
+configure:9491: checking for unsigned char
+configure:9528: checking for sin_len in sock
+configure:9564: checking whether seekdir returns void
+configure:9600: checking for __FILE__ macro
+configure:9634: checking for __FUNCTION__ macro
+configure:9668: checking if gettimeofday takes tz argument
+configure:9707: checking for __va_copy
+configure:9742: checking for C99 vsnprintf
+configure:9801: checking for broken readdir
+configure:9841: checking for utimbuf
+configure:9879: checking for pututline
+configure:9879: checking for pututxline
+configure:9879: checking for updwtmp
+configure:9879: checking for updwtmpx
+configure:9879: checking for getutmpx
+configure:9933: checking for ut_name in utmp
+configure:9968: checking for ut_user in utmp
+configure:10003: checking for ut_id in utmp
+configure:10038: checking for ut_host in utmp
+configure:10073: checking for ut_time in utmp
+configure:10108: checking for ut_tv in utmp
+configure:10143: checking for ut_type in utmp
+configure:10178: checking for ut_pid in utmp
+configure:10213: checking for ut_exit in utmp
+configure:10248: checking for ut_addr in utmp
+configure:10284: checking whether pututline returns pointer
+configure:10320: checking for ut_syslen in utmpx
+configure:10355: checking for Linux kernel oplocks
+configure:10401: checking for kernel change notify support
+configure:10447: checking for kernel share modes
+configure:10498: checking for IRIX kernel oplock type definitions
+configure:10533: checking for irix specific capabilities
+configure:10585: checking for int16 typedef included by rpc/rpc.h
+configure:10622: checking for uint16 typedef included by rpc/rpc.h
+configure:10659: checking for int32 typedef included by rpc/rpc.h
+configure:10696: checking for uint32 typedef included by rpc/rpc.h
+configure:10734: checking for conflicting AUTH_ERROR define in rpc/rpc.h
+configure:10775: checking for test routines
+configure:10784: gcc -o conftest -O    conftest.c  -ldl -lnsl 1>&5
+In file included from configure:10781:
+./tests/trivial.c: In function 'main':
+./tests/trivial.c:3: warning: incompatible implicit declaration of built-in function 'exit'
+configure:10798: checking for ftruncate extend
+configure:10834: checking for broken getgroups
+configure:10870: checking whether getpass should be replaced
+configure:10914: checking for broken inet_ntoa
+configure:10960: checking for secure mkstemp
+configure:11009: checking for sysconf(_SC_NGROUPS_MAX)
+configure:11046: checking for root
+configure:11087: checking for iface AIX
+configure:11128: checking for iface ifconf
+configure:11216: checking for setresuid
+configure:11385: checking for working mmap
+configure:11421: checking for ftruncate needs root
+configure:11457: checking for fcntl locking
+configure:11493: checking for broken (glibc2.1/x86) 64 bit fcntl locking
+configure:11531: checking for 64 bit fcntl locking
+configure:11589: checking for st_blocks in struct stat
+configure:11625: checking for st_blksize in struct stat
+configure:11663: checking for broken RedHat 7.2 system header files
+configure:11706: checking for broken nisplus include files
+configure:11746: checking whether to use smbwrapper
+configure:11793: checking whether to use AFS
+configure:11819: checking whether to use DCE/DFS auth
+configure:11844: checking whether to use Kerberos IV
+configure:11919: checking whether to use Kerberos 5
+configure:11947: checking whether to use AUTOMOUNT
+configure:11972: checking whether to use SMBMOUNT
+configure:12009: checking whether to use PAM password database
+configure:12035: checking for pam_get_data in -lpam
+configure:12081: checking whether to use pam_smbpass
+configure:12123: checking for crypt
+configure:12177: checking for crypt in -lcrypt
+configure:12231: checking for a crypt that needs truncated salt
+configure:12282: checking whether to use TDB SAM database
+configure:12308: checking whether to use LDAP SAM database
+configure:12479: checking whether to use NISPLUS SAM database
+configure:12507: checking whether to use traditional smbpasswd file
+configure:12529: checking whether to use NISPLUS_HOME
+configure:12554: checking whether to use SSL
+configure:12628: checking whether to use syslog logging
+configure:12653: checking whether to use profiling
+configure:12681: checking whether to support disk-quotas
+configure:12705: checking whether to support utmp accounting
+configure:12731: checking whether to support Microsoft Dfs
+configure:12761: checking whether to build the libsmbclient shared library
+configure:12791: checking how to get filesystem space usage
+configure:12798: checking statvfs64 function (SVR4)
+configure:12853: checking statvfs function (SVR4)
+configure:13150: checking if large file support can be enabled
+configure:13165: gcc -c -O   conftest.c 1>&5
+configure:13232: checking whether to support ACLs
+configure:13433: checking whether to check for support sendfile
+configure:13925: checking whether to build winbind
+configure:13985: checking whether to enable winbind auth challenge/response code
+configure:14031: checking whether to enable winbind ldap hack
+configure:14069: checking whether or not getgroups returns EGID too many times
+configure:14134: checking whether struct passwd has pw_comment
+configure:14172: checking whether struct passwd has pw_age
+configure:14224: checking for poptGetContext in -lpopt
+configure:14267: checking whether to use included popt
+configure:14282: checking configure summary
+configure:14291: gcc -o conftest -O    conftest.c  -ldl -lnsl -lcrypt 1>&5
+In file included from configure:14288:
+./tests/summary.c: In function 'main':
+./tests/summary.c:29: warning: incompatible implicit declaration of built-in function 'exit'
